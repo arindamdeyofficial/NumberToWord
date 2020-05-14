@@ -5,3 +5,5 @@
 /NumberToWord/obj
 /.vs/NumberToWord/v16/.suo
 /NumberToWord/bin/Debug/netcoreapp3.1
+/NumberToWordTests/obj
+/NumberToWordTests/bin/Debug/netcoreapp3.1

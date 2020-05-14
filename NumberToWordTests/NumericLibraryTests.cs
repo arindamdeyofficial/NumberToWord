@@ -1,18 +1,25 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using NumberToWord;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using NUnit.Framework;
 
 namespace NumberToWord.Tests
 {
     [TestClass()]
     public class NumericLibraryTests
     {
-        [TestMethod()]
-        public void NumberToWordTest()
+        Mock<INumericLibrary> _lib;
+        [SetUp]
+        public void Setup()
         {
-            Assert.Fail();
+            _lib = new Mock<INumericLibrary>();
+        }
+
+        [Test]
+        public void NumberTestSuccess()
+        {
+            string result = _lib.Object.NumberToWord(0);
+            Assert.IsNotNull(result);
         }
     }
 }

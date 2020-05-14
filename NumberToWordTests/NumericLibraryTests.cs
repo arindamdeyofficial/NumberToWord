@@ -29,5 +29,11 @@ namespace NumberToWord.Tests
             string result = _lib.NumberToWord(n);
             Assert.AreEqual("Eighty Six ", result);
         }
+        [TestCase(13456)]
+        public void NumberTestOutputNormalBig(int n)
+        {
+            string result = _lib.NumberToWord(n);
+            Assert.AreEqual("Therteen Thoisand Four Hundred Fifty Six ", result);
+        }
     }
 }

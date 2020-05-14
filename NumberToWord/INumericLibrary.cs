@@ -2,6 +2,6 @@
 {
     public interface INumericLibrary
     {
-        string NumberToWord(int num);
+        string SpellNumber(int num);
     }
 }

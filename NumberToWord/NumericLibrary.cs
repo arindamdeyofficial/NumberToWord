@@ -2,7 +2,7 @@
 
 namespace NumberToWord
 {
-    public class NumericLibrary
+    public class NumericLibrary: INumericLibrary
     {
         
         public string NumberToWord(int num)

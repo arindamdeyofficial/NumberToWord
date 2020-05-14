@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NumberToWord/obj
+/.vs/NumberToWord/v16/.suo
+/NumberToWord/bin/Debug/netcoreapp3.1

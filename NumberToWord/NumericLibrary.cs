@@ -29,21 +29,30 @@ namespace NumberToWord
                 n /= 10;
                 result.Insert(0, " ");
 
-                if (count == 1) //Teens
-                {
-                    result.Insert(0, tens[r]);
-                }
-                else
-                {
-                    result.Insert(0, nums[r]);
-                    
-                }
                 if (n < 10)
                 {
-                    result.Insert(0, " ");
-                    result.Insert(0, tens[n - 2]);
+                    if (r != 0)
+                    {
+                        result.Insert(0, nums[r]);
+                    }
+                    if (count == 1)//hundred
+                    {
+                        result.Insert(0, " Hundred");
+                        result.Insert(0, nums[n]);
+                    }
+                    else
+                    {
+                        result.Insert(0, " ");
+                        result.Insert(0, tens[n - 2]);
+                    }
                     break;
                 }
+
+                if (r != 0)
+                {
+                    result.Insert(0, nums[r]);
+                }
+
                 count++;
             }
             return result.ToString();
